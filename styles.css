@@ -1,0 +1,17 @@
+/* * {
+    background-color: lightskyblue;
+} */
+
+.prueba1 {
+    background-color: beige;
+}
+
+.aa {
+    background-color: black;
+}
+
+body {
+    background-image: url("esquie.jpeg");
+    background-attachment: scroll
+    ;
+}
