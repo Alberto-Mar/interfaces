@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Tercer ejercicio HTML de interfaces web.">
+    <meta name="author" content="Alberto Martinez Martinez">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Título</h1>
+        <nav></nav>
+    </header>
+    <main>
+        <article id="articulo1">
+            <h2><u>Artículo 1</u></h2>
+            <p><em>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, deserunt.</em></p>
+            <ul type="square">
+                <li>Cuadrados</li>
+                <li>Cuadrados</li>
+                <li>Cuadrados</li>
+            </ul>
+            <p><strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo hic illo necessitatibus accusamus tempora architecto harum esse fugiat facilis mollitia sunt, repudiandae ab distinctio minus?</strong></p>
+            <ol type="I">
+                <li>Uno</li>
+                <li>Dos</li>
+                <li>Tres</li>
+            </ol>
+        </article>
+        <article id="articulo2">
+            <h2><u>Artículo 2</u></h2>
+            <a href="https://www.youtube.com/watch?v=vM-xOLLqd2c&list=PLjpYCWYwqh94gdyq2BSzkwXch_aA_94PL&index=17" target="_blank">Canción</a>
+            <br>
+            <form action="#" method="post" novalidate>
+
+                <label for="nombre">Nombre</label><br>
+                <input type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre" maxlength="30" pattern="[A-Za-z0-9]{1,30}" title="Solo letras y números (hasta 30 caracteres)." required autofocus>
+                <br>
+                <label for="correo">Email</label><br>
+                <input type="email" id="correo" name="correo" placeholder="ejemplo@ejemplo.com" required>
+                <br>
+                <label for="edad">Edad (18-99)</label><br>
+                <input type="number" id="edad" name="edad" placeholder="Tu edad" min="18" max="99" required>
+                <br>
+                <label for="consulta">Consulta</label><br>
+                <input type="text" id="consulta" name="consulta" placeholder="Escribe tu consulta" required>
+                <br>
+                <label for="politica">Acepto la política de privacidad y cookies</label>
+                <input type="checkbox" id="politica" name="politica" required>
+                <br>
+                <button type="submit">Enviar</button>
+            </form>
+        </article>
+        <article id="articulo3">
+            <h2><u>Artículo 3</u></h2>
+            <table border="1">
+        <tr>
+            <th></th>
+            <th>Lu</th>
+            <th>Ma</th>
+            <th>Mi</th>
+            <th>Ju</th>
+            <th>Vi</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td colspan="5">Tarde</td>
+        </tr>
+        <tr>
+            <td>15:10-16:05</td>
+            <td>DAW</td>
+            <td rowspan="2">DWEC+DWES</td>
+            <td rowspan="2">DWEC+DWES</td>
+            <td>OPT</td>
+            <td>SOS</td>
+        </tr>
+        <tr>
+            <td>16:05-17:00</td>
+            <td rowspan="2">DWEC+DWES</td>
+            <td rowspan="2">IPE2</td>
+            <td rowspan="2">2INTER</td>
+        </tr>
+        <tr>
+            <td>17:00-17:55</td>
+            <td>OPT</td>
+            <td>DWEC+DWES</td>
+
+        </tr>
+        <tr>
+            <td></td>
+            <td colspan="5">Descanso</td>
+        </tr>
+        <tr>
+            <td>18:15-19:10</td>
+            <td rowspan="2">DIW</td>
+            <td>OPT</td>
+            <td>DWEC+DWES</td>
+            <td>DIG</td>
+            <td>2INTER</td>
+        </tr>
+        <tr>
+            <td>19:10-20:05</td>
+            <td rowspan="2">DAW</td>
+            <td rowspan="2">DIW</td>
+            <td rowspan="2">DWEC+DWES</td>
+            <td rowspan="2">DWEC+DWES</td>
+        </tr>
+        <tr>
+            <td>20:05-21:00</td>
+            <td>IPE2</td>
+        </tr>
+    </table>
+        </article>
+        <article id="articulo4">
+            <h2><u>Artículo 4</u></h2>
+            <img src="imagen.jpg" alt="imagen ejemplo">
+            <br>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/gekmRefthzU?si=3joasgxG5cg6Yqvd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.6950065007545!2d-5.998934724134117!3d37.397044472082946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd126c08d8253feb%3A0xd533e3470d9cb359!2sPl.%20S.%20Lorenzo%2C%2014%2C%20Casco%20Antiguo%2C%2041002%20Sevilla!5e0!3m2!1ses!2ses!4v1762105718263!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </article>
+    </main>
+    <aside>
+    <h3>Ir a los artículos</h3>
+    <ul>
+      <li><a href="#articulo1">Ir a Artículo 1</a></li>
+      <li><a href="#articulo2">Ir a Artículo 2</a></li>
+      <li><a href="#articulo3">Ir a Artículo 3</a></li>
+    </ul>
+  </aside>
+  <footer>
+    <p>
+      <a href="mailto:ejemplo@ejemplo.com">Enviar un correo electrónico</a> |
+      <a href="tel:+34123123123">Llamar al +34 123 123 123</a>
+    </p>
+  </footer>
+</body>
+</html>
