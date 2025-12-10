@@ -1,0 +1,128 @@
+*{
+    font-family: Arial;
+}
+
+h1{
+    font-size: 2em;
+    text-align: center;
+}
+
+h2{
+    font-size: 1.5em;
+}
+
+h1,h2{
+    color: #0275d8;
+}
+
+#section1 > p {
+    text-align: justify;
+}
+
+.post-author{
+    font-style: italic;
+    color: grey;
+}
+
+.post-date{
+    font-weight: bold;
+    color: orange;
+}
+
+main{
+    width: 70%;
+    padding: 20px;
+    float: left;
+    box-sizing: border-box;
+}
+
+aside{
+    width: 30%;
+    float: left;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgb(196, 202, 206);
+
+}
+
+li{
+    margin-bottom: 10px;
+    list-style-type: none;
+}
+
+a{
+    color: grey;
+    text-decoration: none;
+    
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+nav {
+    background-color: black;
+    display: flex;
+    height: 50px;
+}
+
+nav ul {
+    list-style-type: none;
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;  
+    
+}
+
+nav a {
+    color: white;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+tr:nth-child(even){background-color:#efeff0;}
+
+td, th {
+    border: 1px solid grey;
+    padding: 5px;
+}
+
+caption {
+    caption-side: bottom;
+}
+
+form{
+    align-items: center;
+    background-color: #efeff0;
+    width: 450px;
+    height: 400px;
+    margin-left: 25%;
+}
+
+form button {
+    margin-top: 15px;
+    background-color: #0275d8;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: 25px;
+    width: 150px;
+}
+
+form input, form textarea {
+    padding: 15px;
+    margin-top: 25px;
+    margin-left: 25px;
+    border: 1px solid #ddd;
+    resize: none;
+    width: 320px;
+}
