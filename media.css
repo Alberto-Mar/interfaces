@@ -1,0 +1,19 @@
+div {
+    background-color: red;
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+}
+
+@media (max-width: 600px) {
+    div {
+        background-color: yellow;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 800px) {
+    div {
+        background-color: green;
+    }   
+    
+}

@@ -1,0 +1,27 @@
+/* :root{
+    --color-principal: rgba(5, 5, 111, 0.504);
+    --color-secundario: rgb(232, 161, 29);
+    --color-terciario: rgb(95, 8, 95);
+}
+
+#p1{
+    color: var(--color-principal);
+}
+#p2{
+    color: var(--color-secundario);
+}
+#p3{
+    color: var(--color-terciario);
+} */
+
+.españa {
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient( to bottom, red 0%, red 33%, yellow 33%, yellow 66%, red 66%, red 100%);
+}
+
+.japan {
+    height: 100vh;
+    margin: 0;
+    background: radial-gradient(circle at center, red 0%, red 35%, white 35%, white 100%);
+}

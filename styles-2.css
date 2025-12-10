@@ -17,3 +17,9 @@ div{
 div:nth-child(even){
     background-color: black;
 }
+
+@media (max-width: 600px){
+    div{
+        background-color: yellow;
+    }
+}
