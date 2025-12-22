@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="trans.css">
+</head>
+<body>
+    <div class="controles">
+        <div class="control">
+            <label>Eje X: <span id="valorX">0</span>°</label>
+            <input type="range" id="rangeX" min="0" max="360" value="0">
+        </div>
+        <div class="control">
+            <label>Eje Y: <span id="valorY">0</span>°</label>
+            <input type="range" id="rangeY" min="0" max="360" value="0">
+        </div>
+        <div class="control">
+            <label>Eje Z: <span id="valorZ">0</span>°</label>
+            <input type="range" id="rangeZ" min="0" max="360" value="0">
+        </div>
+    </div>
+    
+    <div class="escena">
+        <div class="cubo">
+            <div class="cara frontal">Frontal</div>
+            <div class="cara trasera">Trasera</div>
+            <div class="cara derecha">Derecha</div>
+            <div class="cara izquierda">Izquierda</div>
+            <div class="cara superior">Superior</div>
+            <div class="cara inferior">Inferior</div>
+        </div>
+    </div>
+
+    <script>
+        const rangeX = document.getElementById('rangeX');
+        const rangeY = document.getElementById('rangeY');
+        const rangeZ = document.getElementById('rangeZ');
+        const valorX = document.getElementById('valorX');
+        const valorY = document.getElementById('valorY');
+        const valorZ = document.getElementById('valorZ');
+        const cubo = document.querySelector('.cubo');
+
+        function actualizarCubo() {
+            const x = rangeX.value;
+            const y = rangeY.value;
+            const z = rangeZ.value;
+            
+            valorX.textContent = x;
+            valorY.textContent = y;
+            valorZ.textContent = z;
+            
+            cubo.style.transform = `rotateX(${x}deg) rotateY(${y}deg) rotateZ(${z}deg)`;
+        }
+
+        rangeX.addEventListener('input', actualizarCubo);
+        rangeY.addEventListener('input', actualizarCubo);
+        rangeZ.addEventListener('input', actualizarCubo);
+    </script>
+</body>
+</html>
