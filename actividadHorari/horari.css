@@ -1,0 +1,72 @@
+/* Texto lateral rotado */
+.texto-vertical {
+    writing-mode: vertical-lr; /* Escribe de arriba abajo */
+    transform: rotate(180deg); /* Lo gira para que se lea desde la tabla hacia afuera */
+    text-align: center;
+    font-weight: bold;
+    color: #555;
+    padding-right: 15px;
+    font-size: 1.1rem;
+}
+
+/* Configuración de las columnas */
+.dia-columna {
+    border-right: 1px solid #dee2e6;
+    min-width: 130px;
+}
+
+.cabecera-dia {
+    padding: 15px 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Bloques de asignatura */
+.asignatura {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Alturas proporcionales */
+.h-1h { height: 80px; }
+.h-2h { height: 160px; }
+.h-3h { height: 240px; }
+
+/* Patio */
+.patio {
+    height: 30px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.h-patio { height: 30px !important; }
+
+/* Horas */
+.hora-referencia {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    color: #444;
+}
+
+/* Colores según la imagen */
+.bg-diw { background-color: #6495ED; }    
+.bg-dwes { background-color: #EEDD82; color: #444; } 
+.bg-ingles { background-color: #F08080; } 
+.bg-dwec { background-color: #62C485; }   
+.bg-eie { background-color: #4B2424; }    
+.bg-daw { background-color: #BA55D3; }    
+
+body {
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+}
