@@ -1,7 +1,7 @@
-/* Texto lateral rotado */
+/* Alberto Martinez Martinez  */
 .texto-vertical {
-    writing-mode: vertical-lr; /* Escribe de arriba abajo */
-    transform: rotate(180deg); /* Lo gira para que se lea desde la tabla hacia afuera */
+    writing-mode: vertical-lr; 
+    transform: rotate(180deg);
     text-align: center;
     font-weight: bold;
     color: #555;
@@ -9,7 +9,6 @@
     font-size: 1.1rem;
 }
 
-/* Configuración de las columnas */
 .dia-columna {
     border-right: 1px solid #dee2e6;
     min-width: 130px;
@@ -21,7 +20,6 @@
     font-weight: bold;
 }
 
-/* Bloques de asignatura */
 .asignatura {
     display: flex;
     justify-content: center;
@@ -32,12 +30,9 @@
     border: 1px solid rgba(255,255,255,0.1);
 }
 
-/* Alturas proporcionales */
-.h-1h { height: 80px; }
-.h-2h { height: 160px; }
-.h-3h { height: 240px; }
+.unah { height: 80px; }
+.dosh { height: 160px; }
 
-/* Patio */
 .patio {
     height: 30px;
     background-color: white;
@@ -46,10 +41,10 @@
     justify-content: center;
 }
 
-.h-patio { height: 30px !important; }
+.patioh { height: 30px !important; }
 
-/* Horas */
-.hora-referencia {
+
+.hora {
     height: 80px;
     display: flex;
     align-items: center;
@@ -58,13 +53,14 @@
     color: #444;
 }
 
-/* Colores según la imagen */
-.bg-diw { background-color: #6495ED; }    
-.bg-dwes { background-color: #EEDD82; color: #444; } 
-.bg-ingles { background-color: #F08080; } 
-.bg-dwec { background-color: #62C485; }   
-.bg-eie { background-color: #4B2424; }    
-.bg-daw { background-color: #BA55D3; }    
+.color-daw { background-color: #356acc; }    
+.color-dwes { background-color: #29af3d;} 
+.color-opt { background-color: #F08080; } 
+.color-ipe { background-color: #a84343; }    
+.color-2inter { background-color: #BA55D3; }    
+.color-dig { background-color: #035e2d; }    
+.color-sos { background-color: #001d7e; }    
+.color-diw { background-color: #dc8120; }    
 
 body {
     background-color: #fff;

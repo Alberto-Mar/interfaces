@@ -1,0 +1,164 @@
+:root {
+    --oro: #B8860B;
+    --bronce: #8B4513;
+    --arena: #DAA520;
+    --fondo: #1C1107;
+    --cristal: rgba(255, 255, 255, 0.1);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    background-color: var(--fondo);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Georgia', serif;
+}
+
+.titulo { color: var(--oro); margin-bottom: 20px; font-size: 1.5rem; }
+
+.oculto { display: none; }
+
+.seccion-control { text-align: center; margin-bottom: 30px; }
+
+.contenedor-engranaje {
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 10px;
+    cursor: pointer;
+}
+
+.engranaje {
+    width: 100%;
+    height: 100%;
+    background-color: var(--bronce);
+    border-radius: 50%;
+    position: relative;
+    animation: giro-engranaje 3s infinite linear;
+}
+
+.centro-engranaje {
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 20px; height: 20px;
+    background-color: var(--fondo);
+    border: 3px solid var(--oro);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.diente {
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 12px; height: 66px;
+    background-color: var(--bronce);
+    transform: translate(-50%, -50%);
+}
+
+.diente:nth-child(2) { transform: translate(-50%, -50%) rotate(45deg); }
+.diente:nth-child(3) { transform: translate(-50%, -50%) rotate(90deg); }
+.diente:nth-child(4) { transform: translate(-50%, -50%) rotate(135deg); }
+
+@keyframes giro-engranaje {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.aviso { 
+    color: var(--oro); 
+    font-size: 10px; 
+    font-weight: bold; 
+    letter-spacing: 1px; }
+
+.escena { perspective: 800px; }
+
+.reloj-maquina {
+    position: relative;
+    width: 170px; 
+    height: 340px;
+    animation: rotacion 10s infinite linear;
+}
+
+.base {
+    width: 210px; 
+    height: 10px; 
+    background-color: var(--oro);
+    position: absolute; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    border: 1px solid #000;
+}
+.superior { top: 0; }
+.inferior { bottom: 0; }
+
+.cuerpo-cristal {
+    position: absolute; 
+    top: 10px; 
+    bottom: 10px; 
+    width: 100%;
+    display: flex; 
+    flex-direction: column;
+}
+
+.triangulo { flex: 1; 
+    position: relative; 
+    background-color: var(--cristal);
+ }
+.alto { clip-path: polygon(0 0, 100% 0, 50% 100%); }
+.bajo { clip-path: polygon(50% 0, 100% 100%, 0 100%); }
+
+.arena-arriba {
+    position: absolute; 
+    top: 0; width: 100%;
+     height: 100%;
+    background-color: var(--arena);
+     transform-origin: bottom center;
+    animation: vaciar 10s infinite linear;
+}
+
+.arena-abajo {
+    position: absolute;
+    bottom: 0;
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    background-color: var(--arena); 
+    transform-origin: bottom center;
+    transform: scaleY(0);
+    animation: llenar 10s infinite linear;
+}
+
+.caida {
+    position: absolute; 
+    top: 50%; 
+    left: 50%;
+    width: 4px; 
+    height: 160px;
+    background-color: var(--arena);
+    transform: translateX(-50%);
+    z-index: 2;
+    animation: flujo-real 10s infinite linear;
+}
+
+@keyframes flujo-real {
+    0% { height: 0; opacity: 0; }
+    5% { height: 160px; opacity: 1; } 
+    80% { height: 160px; opacity: 1; }
+    81%, 100% { height: 0; opacity: 0; }
+}
+
+@keyframes vaciar { 0% { transform: scale(1); } 75%, 100% { transform: scale(0); } }
+@keyframes llenar { 0%, 15% { transform: scaleY(0); } 85%, 100% { transform: scaleY(1); } }
+@keyframes rotacion { 0%, 90% { transform: rotate(0deg); } 100% { transform: rotate(180deg); } }
+
+#maquinaria:not(:checked) ~ .seccion-control .engranaje,
+#maquinaria:not(:checked) ~ .escena .reloj-maquina,
+#maquinaria:not(:checked) ~ .escena .arena-arriba,
+#maquinaria:not(:checked) ~ .escena .arena-abajo,
+#maquinaria:not(:checked) ~ .escena .caida {
+    animation-play-state: paused;
+}
